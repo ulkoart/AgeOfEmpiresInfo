@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		CE950EC5247BBC900085ADC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EC4247BBC900085ADC9 /* AppDelegate.swift */; };
-		CE950EC7247BBC900085ADC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EC6247BBC900085ADC9 /* ViewController.swift */; };
 		CE950ECA247BBC900085ADC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE950EC8247BBC900085ADC9 /* Main.storyboard */; };
 		CE950ECC247BBC930085ADC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE950ECB247BBC930085ADC9 /* Assets.xcassets */; };
 		CE950ECF247BBC930085ADC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE950ECD247BBC930085ADC9 /* LaunchScreen.storyboard */; };
+		CE950EDA247BBDC40085ADC9 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950ED9247BBDC40085ADC9 /* TableVC.swift */; };
+		CE950EDC247BC0CA0085ADC9 /* civilizations.json in Resources */ = {isa = PBXBuildFile; fileRef = CE950EDB247BC0CA0085ADC9 /* civilizations.json */; };
+		CE950EDE247BC1A50085ADC9 /* Сivilization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EDD247BC1A50085ADC9 /* Сivilization.swift */; };
+		CE950EE4247BCF7A0085ADC9 /* CivilizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EE3247BCF7A0085ADC9 /* CivilizationCell.swift */; };
+		CE950EE6247BD6FB0085ADC9 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EE5247BD6FB0085ADC9 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE950EC1247BBC900085ADC9 /* AgeOfEmpiresInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfEmpiresInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE950EC4247BBC900085ADC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE950EC6247BBC900085ADC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE950EC9247BBC900085ADC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE950ECB247BBC930085ADC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE950ECE247BBC930085ADC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE950ED0247BBC930085ADC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE950ED9247BBDC40085ADC9 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		CE950EDB247BC0CA0085ADC9 /* civilizations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = civilizations.json; sourceTree = "<group>"; };
+		CE950EDD247BC1A50085ADC9 /* Сivilization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сivilization.swift"; sourceTree = "<group>"; };
+		CE950EE3247BCF7A0085ADC9 /* CivilizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilizationCell.swift; sourceTree = "<group>"; };
+		CE950EE5247BD6FB0085ADC9 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		CE950EC3247BBC900085ADC9 /* AgeOfEmpiresInfo */ = {
 			isa = PBXGroup;
 			children = (
+				CE950ED8247BBD570085ADC9 /* Model */,
+				CE950ED7247BBD520085ADC9 /* View */,
+				CE950ED6247BBD330085ADC9 /* Controller */,
 				CE950EC4247BBC900085ADC9 /* AppDelegate.swift */,
-				CE950EC6247BBC900085ADC9 /* ViewController.swift */,
-				CE950EC8247BBC900085ADC9 /* Main.storyboard */,
-				CE950ECB247BBC930085ADC9 /* Assets.xcassets */,
-				CE950ECD247BBC930085ADC9 /* LaunchScreen.storyboard */,
 				CE950ED0247BBC930085ADC9 /* Info.plist */,
 			);
 			path = AgeOfEmpiresInfo;
+			sourceTree = "<group>";
+		};
+		CE950ED6247BBD330085ADC9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE950ED9247BBDC40085ADC9 /* TableVC.swift */,
+				CE950EE3247BCF7A0085ADC9 /* CivilizationCell.swift */,
+				CE950EE5247BD6FB0085ADC9 /* DetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE950ED7247BBD520085ADC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE950EC8247BBC900085ADC9 /* Main.storyboard */,
+				CE950ECD247BBC930085ADC9 /* LaunchScreen.storyboard */,
+				CE950ECB247BBC930085ADC9 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE950ED8247BBD570085ADC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE950EDB247BC0CA0085ADC9 /* civilizations.json */,
+				CE950EDD247BC1A50085ADC9 /* Сivilization.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +160,7 @@
 			files = (
 				CE950ECF247BBC930085ADC9 /* LaunchScreen.storyboard in Resources */,
 				CE950ECC247BBC930085ADC9 /* Assets.xcassets in Resources */,
+				CE950EDC247BC0CA0085ADC9 /* civilizations.json in Resources */,
 				CE950ECA247BBC900085ADC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE950EC7247BBC900085ADC9 /* ViewController.swift in Sources */,
+				CE950EE6247BD6FB0085ADC9 /* DetailVC.swift in Sources */,
 				CE950EC5247BBC900085ADC9 /* AppDelegate.swift in Sources */,
+				CE950EDE247BC1A50085ADC9 /* Сivilization.swift in Sources */,
+				CE950EE4247BCF7A0085ADC9 /* CivilizationCell.swift in Sources */,
+				CE950EDA247BBDC40085ADC9 /* TableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
