@@ -28,12 +28,11 @@ class TableVC: UITableViewController {
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search Civilizations"
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
-        searchController.searchBar.scopeButtonTitles = Civilization.Expansion.allCases
-            .map { $0.rawValue }
+        searchController.searchBar.scopeButtonTitles = Civilization.Expansion.allCases.map { $0.rawValue }
         searchController.searchBar.delegate = self
     }
 
@@ -88,14 +87,14 @@ class TableVC: UITableViewController {
     
     func filterContentForSearchText(_ searchText: String,
                                     expansion: Civilization.Expansion? = nil) {
-        
+
         filteredCivilizations = civilizations.filter { (civilization: Civilization) -> Bool in
-            let doesCategoryMatch = expansion == .all || civilization.expansion == expansion
+            let doesExpansionMatch = expansion == .all || civilization.expansion == expansion
             
             if isSearchBarEmpty {
-                return doesCategoryMatch
+                return doesExpansionMatch
             } else {
-                return doesCategoryMatch && civilization.name.lowercased().contains(searchText.lowercased())
+                return doesExpansionMatch && civilization.name.lowercased().contains(searchText.lowercased())
             }
         }
         
@@ -107,7 +106,9 @@ class TableVC: UITableViewController {
 extension TableVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
-        filterContentForSearchText(searchBar.text!)
+        let expansion = Civilization.Expansion(rawValue:
+            searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex])
+        filterContentForSearchText(searchBar.text!, expansion: expansion)
     }
 }
 
