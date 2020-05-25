@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hKA-7H-1Tu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Civilizations-->
+        <scene sceneID="xbm-AF-tdB">
+            <objects>
+                <tableViewController id="zLh-nH-QLx" customClass="TableVC" customModule="AgeOfEmpiresInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OnI-ry-bPR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CivilizationCell" rowHeight="75" id="yJl-Ca-GvV" customClass="CivilizationCell" customModule="AgeOfEmpiresInfo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yJl-Ca-GvV" id="QPI-KT-j2I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expansion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPK-mH-Dlv">
+                                            <rect key="frame" x="16" y="30" width="359" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVO-HY-Vur">
+                                            <rect key="frame" x="16" y="4" width="343" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pPK-mH-Dlv" firstAttribute="top" secondItem="iVO-HY-Vur" secondAttribute="bottom" constant="2" id="0Kn-VI-F7j"/>
+                                        <constraint firstItem="pPK-mH-Dlv" firstAttribute="trailing" secondItem="QPI-KT-j2I" secondAttribute="trailingMargin" constant="16" id="PE6-Aj-rq0"/>
+                                        <constraint firstItem="iVO-HY-Vur" firstAttribute="leading" secondItem="QPI-KT-j2I" secondAttribute="leading" constant="16" id="TQ5-iN-7He"/>
+                                        <constraint firstItem="pPK-mH-Dlv" firstAttribute="bottom" secondItem="QPI-KT-j2I" secondAttribute="bottomMargin" id="TlN-5l-lHV"/>
+                                        <constraint firstAttribute="trailing" secondItem="iVO-HY-Vur" secondAttribute="trailing" constant="16" id="iZu-Je-DRx"/>
+                                        <constraint firstItem="pPK-mH-Dlv" firstAttribute="leading" secondItem="QPI-KT-j2I" secondAttribute="leadingMargin" id="lEJ-Aa-xrK"/>
+                                        <constraint firstItem="iVO-HY-Vur" firstAttribute="top" secondItem="QPI-KT-j2I" secondAttribute="top" constant="4" id="ssD-Ip-SlT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="civilizationExpansionLabel" destination="pPK-mH-Dlv" id="J9T-eU-g0k"/>
+                                    <outlet property="civilizationNamelabel" destination="iVO-HY-Vur" id="5eJ-gX-XWI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zLh-nH-QLx" id="HVr-kg-Y1Q"/>
+                            <outlet property="delegate" destination="zLh-nH-QLx" id="aoV-SN-S8K"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Civilizations" id="ROZ-c6-U5T"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7c-1K-Zss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.80000000000001" y="-2.2488755622188905"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="CHd-ef-yE5">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="4WD-T0-meT" customClass="DetailVC" customModule="AgeOfEmpiresInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCB-Qf-FYz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gym-NA-7aK">
+                                <rect key="frame" x="16" y="36" width="343" height="32"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gym-NA-7aK" firstAttribute="top" secondItem="rM7-lh-YBW" secondAttribute="top" constant="16" id="9xw-GN-GO6"/>
+                            <constraint firstItem="rM7-lh-YBW" firstAttribute="trailing" secondItem="gym-NA-7aK" secondAttribute="trailing" constant="16" id="NuL-Yi-w8I"/>
+                            <constraint firstItem="gym-NA-7aK" firstAttribute="leading" secondItem="rM7-lh-YBW" secondAttribute="leading" constant="16" id="nQ9-lR-x5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rM7-lh-YBW"/>
+                    </view>
+                    <connections>
+                        <outlet property="civilizationNamelabel" destination="gym-NA-7aK" id="k6d-hb-ip7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vx1-o6-fYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="diF-XF-QpI">
+            <objects>
+                <navigationController id="hKA-7H-1Tu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9SD-mI-x8i">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zLh-nH-QLx" kind="relationship" relationship="rootViewController" id="XZs-uA-OKq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvC-07-DkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791" y="-2"/>
+        </scene>
+    </scenes>
+</document>
