@@ -51,12 +51,13 @@ class TableVC: UITableViewController {
     }
     
     func setUpActivityIndicator() {
-//        indicator.center = self.view.center
-//        indicator.hidesWhenStopped = true
-//        indicator.style = UIActivityIndicatorView.Style.gray
-//        self.view.addSubview(indicator)
+        indicator.center = self.view.center
+        indicator.hidesWhenStopped = true
+        indicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(indicator)
         
         progressView.center = view.center
+        progressView.center.y -= 15
         progressView.trackTintColor = UIColor.lightGray
         progressView.tintColor = UIColor.blue
         view.addSubview(progressView)
