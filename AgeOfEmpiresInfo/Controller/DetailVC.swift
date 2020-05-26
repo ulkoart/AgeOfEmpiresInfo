@@ -12,13 +12,36 @@ class DetailVC: UIViewController {
     
     var civilization: Civilization!
     
-    @IBOutlet weak var civilizationNamelabel: UILabel!
-
+    @IBOutlet weak var civilizationNameLabel: UILabel!
+    @IBOutlet weak var civilizationExpansionLabel: UILabel!
+    @IBOutlet weak var civilizationBonusTextView: UITextView!
+    @IBOutlet weak var civilizationArmyTypeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        civilizationNamelabel.text = civilization.name
+        setupNavigationBar()
+        setUpCivilization()
+
     }
     
+    private func setUpCivilization(){
+        civilizationBonusTextView.text = ""
+        civilizationBonusTextView.isScrollEnabled = false
+        civilizationBonusTextView.sizeToFit()
+        civilizationNameLabel.text = civilization.name
+        civilizationExpansionLabel.text = "(\(civilization.expansion.rawValue))"
+        civilization.civilizationBonus.forEach { (bonus) in
+            civilizationBonusTextView.text += "* \(bonus)\n"
+        }
+        civilizationArmyTypeLabel.text = civilization.armyType
+    }
+    
+    private func setupNavigationBar() {
+        if let topItem = navigationController?.navigationBar.topItem {
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+        navigationItem.leftBarButtonItem = nil
+    }
 
     /*
     // MARK: - Navigation

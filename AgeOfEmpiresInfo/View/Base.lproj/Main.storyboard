@@ -75,27 +75,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gym-NA-7aK">
-                                <rect key="frame" x="16" y="36" width="343" height="32"/>
+                                <rect key="frame" x="16" y="36" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="2A3-eM-iVG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expansion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-ot-kom">
+                                <rect key="frame" x="16" y="66" width="343" height="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="- Start game with +50 wood and food" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-vB-4az">
+                                <rect key="frame" x="16" y="91" width="343" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Army type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-v6-FFj">
+                                <rect key="frame" x="16" y="140" width="96" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaF-6k-hnC">
+                                <rect key="frame" x="106" y="140" width="255" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZaF-6k-hnC" firstAttribute="leading" secondItem="Ftx-v6-FFj" secondAttribute="leading" constant="92" id="1u8-vY-VUV"/>
                             <constraint firstItem="gym-NA-7aK" firstAttribute="top" secondItem="rM7-lh-YBW" secondAttribute="top" constant="16" id="9xw-GN-GO6"/>
+                            <constraint firstItem="Ftx-v6-FFj" firstAttribute="leading" secondItem="rM7-lh-YBW" secondAttribute="leading" constant="16" id="BqZ-dh-EWo"/>
+                            <constraint firstItem="rM7-lh-YBW" firstAttribute="trailing" secondItem="ZaF-6k-hnC" secondAttribute="trailing" constant="12" id="KfB-cd-UxT"/>
+                            <constraint firstItem="wd0-ot-kom" firstAttribute="leading" secondItem="rM7-lh-YBW" secondAttribute="leading" constant="16" id="M7n-hM-Oms"/>
                             <constraint firstItem="rM7-lh-YBW" firstAttribute="trailing" secondItem="gym-NA-7aK" secondAttribute="trailing" constant="16" id="NuL-Yi-w8I"/>
+                            <constraint firstItem="aKi-vB-4az" firstAttribute="leading" secondItem="rM7-lh-YBW" secondAttribute="leading" constant="16" id="TXx-PN-cC1"/>
+                            <constraint firstItem="ZaF-6k-hnC" firstAttribute="top" secondItem="aKi-vB-4az" secondAttribute="bottom" constant="16" id="brn-58-gSh"/>
+                            <constraint firstItem="aKi-vB-4az" firstAttribute="top" secondItem="wd0-ot-kom" secondAttribute="bottom" constant="8" id="fne-7k-S6v"/>
                             <constraint firstItem="gym-NA-7aK" firstAttribute="leading" secondItem="rM7-lh-YBW" secondAttribute="leading" constant="16" id="nQ9-lR-x5H"/>
+                            <constraint firstItem="rM7-lh-YBW" firstAttribute="trailing" secondItem="aKi-vB-4az" secondAttribute="trailing" constant="16" id="nec-l9-38Y"/>
+                            <constraint firstItem="rM7-lh-YBW" firstAttribute="trailing" secondItem="Ftx-v6-FFj" secondAttribute="trailing" constant="263" id="nlC-5w-0hQ"/>
+                            <constraint firstItem="Ftx-v6-FFj" firstAttribute="top" secondItem="aKi-vB-4az" secondAttribute="bottom" constant="16" id="pVy-az-Quw"/>
+                            <constraint firstItem="wd0-ot-kom" firstAttribute="top" secondItem="gym-NA-7aK" secondAttribute="bottom" constant="2" id="uzo-4u-s7R"/>
+                            <constraint firstItem="rM7-lh-YBW" firstAttribute="trailing" secondItem="wd0-ot-kom" secondAttribute="trailing" constant="16" id="v2d-t8-k3L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rM7-lh-YBW"/>
                     </view>
                     <connections>
-                        <outlet property="civilizationNamelabel" destination="gym-NA-7aK" id="k6d-hb-ip7"/>
+                        <outlet property="civilizationArmyTypeLabel" destination="ZaF-6k-hnC" id="hto-dp-At0"/>
+                        <outlet property="civilizationBonusTextView" destination="aKi-vB-4az" id="8Ma-EM-05b"/>
+                        <outlet property="civilizationExpansionLabel" destination="wd0-ot-kom" id="O2R-MZ-sDv"/>
+                        <outlet property="civilizationNameLabel" destination="gym-NA-7aK" id="k6d-hb-ip7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx1-o6-fYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="-2"/>
+            <point key="canvasLocation" x="892" y="-2.2488755622188905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="diF-XF-QpI">
