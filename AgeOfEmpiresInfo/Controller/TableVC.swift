@@ -14,11 +14,15 @@ class TableVC: UITableViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.tableView.separatorStyle = .singleLine
             }
         }
     }
     var filteredCivilizations: [Civilization] = []
+    
     let searchController = UISearchController(searchResultsController: nil)
+    var indicator = UIActivityIndicatorView()
+    var progressView = UIProgressView(progressViewStyle: .default)
     
     var isSearchBarEmpty: Bool {
         return searchController.searchBar.text?.isEmpty ?? true
@@ -31,7 +35,7 @@ class TableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // civilizations = СivilizationList.civilizations() // mock json
-        
+
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Civilizations"
@@ -41,9 +45,36 @@ class TableVC: UITableViewController {
         searchController.searchBar.scopeButtonTitles = Civilization.Expansion.allCases.map { $0.rawValue }
         searchController.searchBar.delegate = self
         
+        setUpActivityIndicator()
+        loadData()
+
+    }
+    
+    func setUpActivityIndicator() {
+//        indicator.center = self.view.center
+//        indicator.hidesWhenStopped = true
+//        indicator.style = UIActivityIndicatorView.Style.gray
+//        self.view.addSubview(indicator)
+        
+        progressView.center = view.center
+        progressView.trackTintColor = UIColor.lightGray
+        progressView.tintColor = UIColor.blue
+        view.addSubview(progressView)
+    }
+    
+    func loadData() {
+        self.indicator.startAnimating()
+        self.tableView.separatorStyle = .none
         AgeOfEmpiresServiceImp.getCivilizations(completion: {civilizations, error  in
             self.civilizations = civilizations ?? []
-            self.tableView.reloadData()
+            self.progressView.isHidden = true
+            self.indicator.stopAnimating()
+        }, progressCompletion: {progress in
+            print(String(format: "%.1f%%", progress * 100))
+            DispatchQueue.main.async {
+                self.progressView.setProgress(Float(progress), animated: false)
+            }
+            
         })
     }
 
@@ -95,6 +126,8 @@ class TableVC: UITableViewController {
         navigationController?.pushViewController(viewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    // MARK: - Table filter
     
     func filterContentForSearchText(_ searchText: String,
                                     expansion: Civilization.Expansion? = nil) {
