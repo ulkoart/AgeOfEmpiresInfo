@@ -10,7 +10,13 @@ import UIKit
 
 class TableVC: UITableViewController {
     
-    var civilizations: [Civilization] = []
+    var civilizations: [Civilization] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     var filteredCivilizations: [Civilization] = []
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -24,7 +30,7 @@ class TableVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        civilizations = СivilizationList.civilizations()
+        // civilizations = СivilizationList.civilizations() // mock json
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -34,6 +40,11 @@ class TableVC: UITableViewController {
         
         searchController.searchBar.scopeButtonTitles = Civilization.Expansion.allCases.map { $0.rawValue }
         searchController.searchBar.delegate = self
+        
+        AgeOfEmpiresServiceImp.getCivilizations(completion: {civilizations, error  in
+            self.civilizations = civilizations ?? []
+            self.tableView.reloadData()
+        })
     }
 
     // MARK: - Table view data source

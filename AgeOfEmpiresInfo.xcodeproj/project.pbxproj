@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7FE68A247CEA0300F148D8 /* AgeOfEmpiresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FE689247CEA0300F148D8 /* AgeOfEmpiresService.swift */; };
 		CE950EC5247BBC900085ADC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EC4247BBC900085ADC9 /* AppDelegate.swift */; };
 		CE950ECA247BBC900085ADC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE950EC8247BBC900085ADC9 /* Main.storyboard */; };
 		CE950ECC247BBC930085ADC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE950ECB247BBC930085ADC9 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7FE689247CEA0300F148D8 /* AgeOfEmpiresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeOfEmpiresService.swift; sourceTree = "<group>"; };
 		CE950EC1247BBC900085ADC9 /* AgeOfEmpiresInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfEmpiresInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE950EC4247BBC900085ADC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE950EC9247BBC900085ADC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7FE688247CE91C00F148D8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FE689247CEA0300F148D8 /* AgeOfEmpiresService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE7FE68B247CEF3F00F148D8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE950ECB247BBC930085ADC9 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		CE950EB8247BBC900085ADC9 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +80,8 @@
 		CE950EC3247BBC900085ADC9 /* AgeOfEmpiresInfo */ = {
 			isa = PBXGroup;
 			children = (
+				CE7FE68B247CEF3F00F148D8 /* Assets */,
+				CE7FE688247CE91C00F148D8 /* Service */,
 				CE950ED8247BBD570085ADC9 /* Model */,
 				CE950ED7247BBD520085ADC9 /* View */,
 				CE950ED6247BBD330085ADC9 /* Controller */,
@@ -86,7 +106,6 @@
 			children = (
 				CE950EC8247BBC900085ADC9 /* Main.storyboard */,
 				CE950ECD247BBC930085ADC9 /* LaunchScreen.storyboard */,
-				CE950ECB247BBC930085ADC9 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +195,7 @@
 				CE950EC5247BBC900085ADC9 /* AppDelegate.swift in Sources */,
 				CE950EDE247BC1A50085ADC9 /* Сivilization.swift in Sources */,
 				CE950EE4247BCF7A0085ADC9 /* CivilizationCell.swift in Sources */,
+				CE7FE68A247CEA0300F148D8 /* AgeOfEmpiresService.swift in Sources */,
 				CE950EDA247BBDC40085ADC9 /* TableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
