@@ -17,6 +17,9 @@
 		CE950EDE247BC1A50085ADC9 /* Сivilization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EDD247BC1A50085ADC9 /* Сivilization.swift */; };
 		CE950EE4247BCF7A0085ADC9 /* CivilizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EE3247BCF7A0085ADC9 /* CivilizationCell.swift */; };
 		CE950EE6247BD6FB0085ADC9 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE950EE5247BD6FB0085ADC9 /* DetailVC.swift */; };
+		CEC0F1E1247F93EE0070FE9C /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC0F1E0247F93EE0070FE9C /* main.png */; };
+		CEC0F1E4247F94710070FE9C /* screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC0F1E2247F94710070FE9C /* screenshot_1.png */; };
+		CEC0F1E5247F94710070FE9C /* screenshot_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC0F1E3247F94710070FE9C /* screenshot_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		CE950EDD247BC1A50085ADC9 /* Сivilization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сivilization.swift"; sourceTree = "<group>"; };
 		CE950EE3247BCF7A0085ADC9 /* CivilizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilizationCell.swift; sourceTree = "<group>"; };
 		CE950EE5247BD6FB0085ADC9 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		CEC0F1DE247F8DC90070FE9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CEC0F1E0247F93EE0070FE9C /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
+		CEC0F1E2247F94710070FE9C /* screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_1.png; sourceTree = "<group>"; };
+		CEC0F1E3247F94710070FE9C /* screenshot_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +71,10 @@
 		CE950EB8247BBC900085ADC9 = {
 			isa = PBXGroup;
 			children = (
+				CEC0F1DF247F93DD0070FE9C /* images */,
 				CE950EC3247BBC900085ADC9 /* AgeOfEmpiresInfo */,
 				CE950EC2247BBC900085ADC9 /* Products */,
+				CEC0F1DE247F8DC90070FE9C /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +126,16 @@
 				CE950EDD247BC1A50085ADC9 /* Сivilization.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEC0F1DF247F93DD0070FE9C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0F1E2247F94710070FE9C /* screenshot_1.png */,
+				CEC0F1E3247F94710070FE9C /* screenshot_2.png */,
+				CEC0F1E0247F93EE0070FE9C /* main.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE950ECF247BBC930085ADC9 /* LaunchScreen.storyboard in Resources */,
+				CEC0F1E1247F93EE0070FE9C /* main.png in Resources */,
 				CE950ECC247BBC930085ADC9 /* Assets.xcassets in Resources */,
+				CEC0F1E4247F94710070FE9C /* screenshot_1.png in Resources */,
 				CE950EDC247BC0CA0085ADC9 /* civilizations.json in Resources */,
+				CEC0F1E5247F94710070FE9C /* screenshot_2.png in Resources */,
 				CE950ECA247BBC900085ADC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
