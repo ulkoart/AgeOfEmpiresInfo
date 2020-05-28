@@ -12,6 +12,7 @@ struct Civilization: Decodable {
     let name: String
     let expansion: Expansion
     let armyType: String
+    let teamBonus: String
     let civilizationBonus: [String]
     
     enum Expansion: Decodable {
@@ -24,6 +25,7 @@ struct Civilization: Decodable {
         case name
         case expansion
         case armyType = "army_type"
+        case teamBonus = "team_bonus"
         case civilizationBonus = "civilization_bonus"
     }
 }

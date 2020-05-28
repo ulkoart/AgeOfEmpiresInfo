@@ -16,6 +16,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var civilizationExpansionLabel: UILabel!
     @IBOutlet weak var civilizationBonusTextView: UITextView!
     @IBOutlet weak var civilizationArmyTypeLabel: UILabel!
+    @IBOutlet weak var civilizationTeamBonusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class DetailVC: UIViewController {
             civilizationBonusTextView.text += "* \(bonus)\n"
         }
         civilizationArmyTypeLabel.text = civilization.armyType
+        civilizationTeamBonusLabel.text = civilization.teamBonus
     }
     
     private func setupNavigationBar() {
